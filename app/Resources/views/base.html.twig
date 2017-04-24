@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}demo GenjFaqBundle{% endblock %}</title>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/favicon-apple-touch.png" rel="apple-touch-icon">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/blog.css" rel="stylesheet">
+</head>
+<body>
+
+{% set path = app.request.attributes.get('_route') %}
+
+
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="nav blog-nav">
+            <a class="nav-link{% if path == 'homepage'           %} active{% endif %}" href="{{ path('homepage') }}">Home</a>
+            <a class="nav-link{% if path == 'genj_faq_faq_index' %} active{% endif %}" href="{{ path('genj_faq_faq_index') }}">Simple listing</a>
+        </nav>
+    </div>
+</div>
+
+
+
+{% block body %}{% endblock %}
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

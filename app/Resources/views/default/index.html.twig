@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Demo GenjFaqBundle</h1>
+            <p class="lead blog-description">
+                This is a demonstration of the <a href="https://github.com/genj/GenjFaqBundle" rel="nowfollow" target="_blank">GenjFaqBundle</a>
+                within a standard <a href="http://symfony.com/download" rel="nofollow" target="_blank">Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:5] }} project</a>.
+            </p>
+    	    <p>
+	        	The Bundle comes with just one page:<br>
+                <a href="{{path('genj_faq_faq_index') }}">list of all active categories and questions</a>.
+            </p>
+        </div>
+    </div>
+{% endblock %}

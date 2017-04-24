@@ -46,3 +46,12 @@
 
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~
+
+
+web/uploads
+web/thumbnails
+web/css/partials
+web/scss/.sass-cache
+
+.idea/workspace.xml
+tests/
