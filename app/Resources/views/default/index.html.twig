@@ -10,10 +10,31 @@
                 This is a demonstration of the <a href="https://github.com/genj/GenjFaqBundle" rel="nowfollow" target="_blank">GenjFaqBundle</a>
                 within a standard <a href="http://symfony.com/download" rel="nofollow" target="_blank">Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:5] }} project</a>.
             </p>
-    	    <p>
-	        	The Bundle comes with just one page:<br>
-                <a href="{{path('genj_faq_faq_index') }}">list of all active categories and questions</a>.
+            <p>
+            The Bundle comes with a handful of (sub)actions like:
             </p>
+            <ul>
+                <li><a href="{{path('genj_faq_faq_index') }}">list of all active categories and questions</a></li>
+                <li>list most recent questions</li>
+                <li>list of active categories</li>
+            </ul>
+            <p>
+                All available actions and subactions will be demonstrated in the projects
+                default app/Resources/views/default/index.html.twig
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-8 blog-main">
+                {{ render(controller('GenjFaqBundle:Question:listMostRecent', { max:5 })) }}
+            </div>
+
+            <div class="col-sm-3 offset-sm-1 blog-sidebar">
+                {{ render(controller('GenjFaqBundle:Category:listActive')) }}
+            </div>
         </div>
     </div>
 {% endblock %}

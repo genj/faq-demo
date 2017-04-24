@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.headline }} FAQ{% endblock %}
+
+{% block body %}
+
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">{{ category.headline }}</h1>
+            <p class="lead blog-description">{{ category.body }}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul>
+            {% for question in category.sortedQuestions %}
+                <li>
+                    <a href="{{ path(question.routeName, question.routeParameters) }}">{{ question.headline|e }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

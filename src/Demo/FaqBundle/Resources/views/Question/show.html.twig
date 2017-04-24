@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ question.headline }} - FAQ{% endblock %}
+
+{% block body %}
+
+<div class="blog-header">
+    <div class="container">
+        <h1 class="blog-title">{{ question.headline }}</h1>
+        <p class="lead blog-description">{{ question.category.headline }}</p>
+    </div>
+</div>
+
+<div class="container">
+{{ question.body|raw }}
+</div>
+
+{% endblock %}

@@ -26,3 +26,10 @@ Run composer install and follow instructions
 ```
 $ composer install
 ```
+
+
+
+## ToDo
+
+* enable GenjFaqAdminBundle
+*
