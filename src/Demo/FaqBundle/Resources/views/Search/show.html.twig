@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}search for {% if search %}{{ search.headline }}{% endif %} - FAQ{% endblock %}
+
+{% block body %}
+
+    <div class="blog-header">
+        <div class="container">
+            {% if search %}
+            <h1 class="blog-title">results for {{ search.headline }}</h1>
+            <p class="lead blog-description">this has been searched {{ search.searchCount }}x</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                {% if search %}
+                    {{ render(controller('GenjFaqBundle:Question:listByQuery', { max: 15, 'query': search.headline })) }}
+                {% else %}
+                    what are you searching for?
+                {% endif %}
+            </div>
+            <div class="col-sm-3 offset-sm-1 blog-sidebar">
+                {{ render(controller('GenjFaqBundle:Search:listMostPopular')) }}
+                {{ render(controller('GenjFaqBundle:Question:listMostRecent', { max:5 })) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

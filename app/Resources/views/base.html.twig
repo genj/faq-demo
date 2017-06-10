@@ -19,6 +19,10 @@
         <nav class="nav blog-nav">
             <a class="nav-link{% if path == 'homepage'           %} active{% endif %}" href="{{ path('homepage') }}">Home</a>
             <a class="nav-link{% if path == 'genj_faq_faq_index' %} active{% endif %}" href="{{ path('genj_faq_faq_index') }}">Simple listing</a>
+            <form class="form-inline" action="{{ path('genj_faq_search_show') }}">
+                <input class="form-control mr-sm-2" placeholder="Search" type="text" name="query">
+                <button class="btn" type="submit">Search</button>
+            </form>
         </nav>
     </div>
 </div>

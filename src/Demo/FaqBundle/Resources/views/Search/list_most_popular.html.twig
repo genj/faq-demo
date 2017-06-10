@@ -1,0 +1,11 @@
+<div class="blog-post">
+    <h2 class="blog-post-title">Most popular searches</h2>
+
+    <ul>
+    {% for query in queries %}
+        <li><a href="{{ path(query.routeName, query.routeParameters) }}">{{ query.headline }}</a> ({{ query.searchCount }})</li>
+    {% else %}
+        <li>none yet - start searching</li>
+    {% endfor %}
+    </ul>
+</div>
