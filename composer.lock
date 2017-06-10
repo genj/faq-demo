@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bc3c5b6a5c3a96ded96fa037ced7c005",
+    "hash": "bdb691954ed03852fd27612a08e33039",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1074,16 +1074,16 @@
         },
         {
             "name": "genj/faq-bundle",
-            "version": "v2.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genj/GenjFaqBundle.git",
-                "reference": "5ea81c585497770c5f6003eb0cfdb6020679b107"
+                "reference": "e1021b5b02c23e1956906edbd72a69cbcd906ca3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genj/GenjFaqBundle/zipball/5ea81c585497770c5f6003eb0cfdb6020679b107",
-                "reference": "5ea81c585497770c5f6003eb0cfdb6020679b107",
+                "url": "https://api.github.com/repos/genj/GenjFaqBundle/zipball/e1021b5b02c23e1956906edbd72a69cbcd906ca3",
+                "reference": "e1021b5b02c23e1956906edbd72a69cbcd906ca3",
                 "shasum": ""
             },
             "require": {
@@ -1131,7 +1131,7 @@
                 "symfony",
                 "symfony-bundle"
             ],
-            "time": "2017-06-10 19:26:35"
+            "time": "2017-06-10 20:11:36"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2460,7 +2460,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "genj/faq-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

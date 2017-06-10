@@ -35,7 +35,7 @@
 
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "gedmo/doctrine-extensions": ">=2.4.10",
-        "genj/faq-bundle": "2.0.0"
+        "genj/faq-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
