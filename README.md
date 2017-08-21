@@ -21,15 +21,25 @@ $ git clone https://github.com/genj/faq-demo.git
 ```
 
 
-Run composer install and follow instructions
+Run ```composer install``` and follow instructions 
+or ```composer update``` to get the versions matched with your environment.
 
 ```
 $ composer install
 ```
 
+setup your database
+```
+$ php bin/console doctrine:schema:update --dump-sql
+```
+
+add fixtures if wanted
+
+```
+$ php bin/console doctrine:fixtures:load --fixtures=vendor/genj/faq-bundle/src/Genj/FaqBundle/DataFixtures/
+```
 
 
 ## ToDo
 
-* enable GenjFaqAdminBundle
-*
+example integration for FaqAdmin
